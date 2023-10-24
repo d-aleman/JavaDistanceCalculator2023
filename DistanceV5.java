@@ -3,6 +3,7 @@ public class DistanceV5 {
 	public static void main(String[] args) {
 		
 		DistanceCalculator dc = new DistanceCalculator();
+
         boolean doContinue = true;
         
         do {
@@ -23,7 +24,7 @@ public class DistanceV5 {
 		} while (doContinue);
         
         System.out.println("\nGoodbye!");
-        
+
 	} // end of main function
 		
 } // end of class
