@@ -2,6 +2,7 @@ import java.io.*;
 
 public class DistanceCalculator {
 
+
 	private double speed; // speed (unit determined by user)
 	private double time;  // time (min)
     private String distanceUnit; // distance unit ("mi" or "km")
@@ -15,12 +16,16 @@ public class DistanceCalculator {
         this.convertedDistanceUnit = "km";
         this.speedUnit = "mph";
 	}
+    
+    public double getSpeed() { return this.speed; }
+    public double getTime() { return this.time; }
 
 	public void getUserInput() {
         this.getDistUnit();
 		this.speed = this.getNonnegDouble("Enter a speed (" + this.speedUnit + "): ");
 		this.time = this.getNonnegDouble("Enter a time traveled (minutes): ");
 	}
+
 
 	public void printDistance() {
         double dist = this.calcDist();
@@ -64,6 +69,7 @@ public class DistanceCalculator {
 		} while (!valid);
 		return x;
 	} // end of getNonnegDouble()
+
     
     // get a distance unit from user, either "mph" or "km"
     public void getDistUnit() {
